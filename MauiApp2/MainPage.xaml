@@ -23,7 +23,7 @@
             <Button Text="8" Grid.Row="4" Grid.Column="1" Clicked="NumberButtonClicked"/>
             <Button Text="9" Grid.Row="4" Grid.Column="2" Clicked="NumberButtonClicked"/>
             <Button Text="0" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Clicked="NumberButtonClicked"/>
-            <Button Text="," Grid.Row="5" Grid.Column="2" Clicked="CommaButtonClicked"/>
+            <Button Text="." Grid.Row="5" Grid.Column="2" Clicked="NumberButtonClicked"/>
             <Button Text="+" Grid.Row="5" Grid.Column="3" Clicked="OperatorButtonClicked"/>
             <Button Text="-" Grid.Row="4" Grid.Column="3" Clicked="OperatorButtonClicked"/>
             <Button Text="*" Grid.Row="3" Grid.Column="3" Clicked="OperatorButtonClicked"/>
