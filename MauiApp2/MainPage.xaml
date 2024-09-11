@@ -5,6 +5,7 @@
 
     <VerticalStackLayout Padding="20">
         <Label Text="Калькулятор" FontSize="25" TextColor="#DB7093" HorizontalOptions="Start" FontAttributes="Bold"/>
+        <Entry x:Name="History"  FontSize="30" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Keyboard="Numeric" IsReadOnly="True"/>
         <Entry x:Name="Display" FontSize="48" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Keyboard="Numeric" IsReadOnly="True"/>
         <Grid ColumnDefinitions="*,*,*,*,*" RowDefinitions="*,*,*,*,*,*">
             
