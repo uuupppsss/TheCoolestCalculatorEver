@@ -2,7 +2,7 @@
 {
     public partial class MainPage : ContentPage
     {
-        private string _currentOperation=string.Empty;
+        private string _currentHistory =string.Empty;
         private string _currentEntry=string.Empty;
         private string _operator = string.Empty;
         private double _value = 0;
@@ -45,9 +45,7 @@
         }
 
         private void CE_ButtonClicked(object sender, EventArgs e)
-        {
-            string history = History.Text;
-            
+        {            
             _currentEntry = string.Empty;
             Display.Text = string.Empty;
         }
@@ -57,7 +55,7 @@
             _currentEntry= string.Empty;
             _operator= string.Empty;
             Display.Text=string.Empty;
-            _currentOperation = string.Empty;
+            _currentHistory = string.Empty;
             History.Text = string.Empty;
         }
 
@@ -94,16 +92,13 @@
         {
            var button= sender as Button;
             _currentEntry += button.Text;
-            Display.Text = _currentEntry;
-            _currentOperation += button.Text;
-            History.Text = _currentOperation;
-           
+            Display.Text = _currentEntry;           
         }
 
         private void EqualsButtonClicked(object sender, EventArgs e)
         {
            GetResultMethod();
-            _currentOperation = string.Empty;
+            _currentHistory = string.Empty;
             History.Text = string.Empty;
             _operatorClickCount = 0;
 
@@ -148,13 +143,22 @@
             if (double.TryParse(_currentEntry, out _value))
             {
                 _operator = button.Text;
+                HistoryMethod();
                 _currentEntry = string.Empty;
-                _currentOperation += _operator;
-                History.Text = _currentOperation;
                 _operatorClickCount++;
+
             }
            
         }
+        private void HistoryMethod()
+        {
+            _currentHistory += _currentEntry;
+            _currentHistory += _operator;
+            History.Text = _currentHistory;
+
+        }
     }
+
+
 
 }
